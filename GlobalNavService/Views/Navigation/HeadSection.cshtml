@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null;
+}
+
+@using GlobalNavService.Utils
+@model GlobalNavService.Models.JsonHeadModel
+
+@functions
+{
+    private string GetScriptUrl()
+    {
+        if (!string.IsNullOrWhiteSpace(GlobalConst.ScriptUrl))
+        {
+            return GlobalConst.ScriptUrl;
+        }
+        else
+        {
+            HttpRequestBase request = this.PageContext.Page.Request;
+            return request.Url.Scheme + "://" + request.Headers["Host"] + "/Content/scripts/globalNav.js";
+        }
+    }
+}
+
+<script>
+    window.__globalNav__ = @Html.Raw(Json.Encode(Model.ApplicationModel));
+    window.__globalNav__.LocalityData = @Html.Raw(Model.ApplicationModel.Locality.LocalityData);
+
+    window.__globalNav__.gn = {
+        DefaultHelpUrl: '@GlobalConst.DefaultHelpUrl',
+        appName: '@Model.Application',
+        environment: '@Model.Environment',
+        loginUrl: '@Html.Raw(Model.LoginUrl)'
+    };
+</script>
+
+<script src="@GetScriptUrl()"></script>
+
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '@Model.GaAccount']);
+    _gaq.push(['_setDomainName', '@Model.GaDomainName']);
+
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>

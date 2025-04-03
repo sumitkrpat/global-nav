@@ -1,0 +1,14 @@
+{
+    "general": {
+        "acxiomSiteTitle": "前往ACXIOM网站"
+    },
+    "fullHeader": {
+        "welcome": "欢迎您",
+        "accountSettings": "帐号设置",
+        "customerSupport": "客户支持",
+        "signOut": "退出"
+    },
+    "emptyHeader": {
+        "signIn": "登录"
+    }
+}

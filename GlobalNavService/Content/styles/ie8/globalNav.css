@@ -1,0 +1,16 @@
+.acx-global-navigation .acx-page-container {
+    outline: 1px solid #ccc;
+}
+
+.acx-topnav-logo label {
+    vertical-align: bottom;
+}
+
+.acx-nav-inner-left div ul li ul {
+    border: 1px solid #ccc;
+}
+
+.acxm-dialog {
+    border: 1px solid #ccc;
+    border-top: 0;
+}

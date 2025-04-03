@@ -1,0 +1,14 @@
+﻿{
+    "general": {
+        "acxiomSiteTitle": "Перейти на ACXIOM Веб Сайт"
+    },
+    "fullHeader": {
+        "welcome": "Вітаємо",
+        "accountSettings": "Налаштування",
+        "customerSupport": "Підтримка Клієнтів",
+        "signOut": "Вийти"
+    },
+    "emptyHeader": {
+        "signIn": "Ввійти"
+    }
+}

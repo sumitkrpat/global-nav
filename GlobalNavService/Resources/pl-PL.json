@@ -1,0 +1,14 @@
+﻿{
+    "general": {
+        "acxiomSiteTitle": "Witaj w ACXIOM Web"
+    },
+    "fullHeader": {
+        "welcome": "Witaj",
+        "accountSettings": "Ustawienia",
+        "customerSupport": "Pomoc techniczna",
+        "signOut": "Wyloguj"
+    },
+    "emptyHeader": {
+        "signIn": "Zaloguj"
+    }
+}
